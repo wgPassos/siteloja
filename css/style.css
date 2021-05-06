@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    
+}
+
+header {
+    padding-top: 10px;
+    background: no-repeat center/cover url(../images/principalbg.png);
+    height: calc(100vh - 120px);
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: black;
+    
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #000807);
+    /* opacity: .7; */
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 30px;
+    padding-top: 20px;
+}
+
+header nav p {
+    font-weight: bold;
+    color: #197278;
+    text-transform: uppercase;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+header nav ul {
+    
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    color: #197278;
+    border-bottom: 1px solid transparent;
+    
+    padding: 5px 5px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-content {
+    position: absolute;
+    left: calc(50% - 200px);
+    box-sizing: border-box;
+    max-width: 400px;
+    padding: 0 20px;
+    margin: 150px auto;
+    text-align: center;
+    /* color: #197278; */
+    color: #EBEBEB;
+    text-shadow: 1px 2px 8px rgb(49, 45, 45);
+    letter-spacing: 2px;
+}
+
+.header-content h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    
+}
+
+.header-content p {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    /* background-color: #FD9704; */
+    background-color: #197278;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.topico {
+    /* background-color: #e5e5e5; */
+    /* margin-top: 1px solid #000807; */
+    background-color: #000807;
+    margin: 0;
+    position: relative;
+    padding-bottom: 105px;
+}
+
+.topico::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg, #000807, #EBEBEB 10%);
+    z-index: 10;
+}
+
+.topico_area {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#pacotes {
+    color: #EBEBEB;
+}
+
+.pacotes {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1080px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    /* background-color: #000807; */
+   
+}
+
+.pacotes .card {
+    width: 250px;
+    border-radius: 24px 0;
+    background-color: white;
+    position: relative;
+    margin: 10px 10px 15px 10px;
+    cursor: pointer;
+}
+
+
+.pacotes .card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 24px 0 0 0;
+    cursor: pointer;
+}
+
+.pacotes .card .card-ico {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    
+}
+
+.pacotes .card .card-ico .card-top {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    /* background-color: #FD9704; */
+    background-color: #EA9010;
+    padding: 5px 10px;
+    border-radius: 8px 0 0 8px;
+    color: white;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.pacotes .card .card-ico .card-bottom {
+    position: absolute;
+    top: 235px;
+    left: 0;
+    /* background-color: #145CE7; */
+    background-color: #197278;
+    padding: 5px 25px;
+    border-radius: 0 8px 8px 0;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.pacotes .card .card-ico h1 {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+
+.pacotes .card .card-ico ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.pacotes .card .card-ico ul li {
+    padding-bottom: 5px;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    color: grey;
+}
+
+.pacotes .card .card-ico ul li svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.topico_service {
+    background-color: #EBEBEB;
+    position: relative;
+    padding: 0px 0px 105px 0px;
+}
+
+.topico_service::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg, #EBEBEB, #197278 10%);
+}
+
+#servicos {
+    /* background-color: transparent; */
+    /* margin: 0; */
+    background-color: #EBEBEB;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 950px;
+    margin: auto;
+    background-color: #EBEBEB;
+}
+
+.services_card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 20px;
+    margin-bottom: 25px;
+    width: 250px;
+    font-size: .8rem;
+}
+
+figure {
+    padding: 0px 10px 20px 10px;
+}
+
+figure svg {
+    width: 60px;
+    height: 60px;
+}
+
+.card_tampadrao {
+    height: 150px;
+    text-align: center;
+}
+
+.card_tampadrao h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+.services_card p {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* footer */
+
+footer {
+    /* background-color: #e5e5e5; */
+    background-color: #197278;
+}
+
+footer section {
+    position: relative;
+}
+
+footer section .contato {
+    height: 300px;
+    width: 350px;
+    background-color: white;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(25% - 175px);
+    box-sizing: border-box;
+    padding: 40px 46px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.contato h3 {
+    margin-bottom: 30px;
+}
+
+.contato address ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.contato address ul li {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    color: grey; 
+    cursor: pointer;
+}
+
+.contato address ul li svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+   
+}
+
+footer section iframe {
+    padding: 20px 10% 60px 10%;
+    width: 80%;
+}
+
+/* RESPONSIVIDADE */
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 767px) {
+    figure svg:hover {
+        /* color: #FD9704; */
+        color: #197278;
+        transition: .4s;
+        transform: scale(1.1);
+    }
+
+    .pacotes .card:hover {
+        transform: scale(1.01);
+        transition: .2s;
+    }
+
+    header nav ul li:hover,
+    header nav ul li .active {
+        transform: scale(1.0);
+        /* color: #FD9704; */
+        /* color: #EA9010; */
+        transition: .3s;
+        border-bottom: 1px solid #197278;
+    }
+}
+
+/* Landscape especial para < 800px*/
+
+@media (max-width: 850px) {
+    footer section {
+        position: static;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer section .contato {
+        position: static;
+
+    }
+}
+
+/* Landscape map */
+@media (max-width: 700px) {
+    footer section iframe {
+        padding: 20px 0 60px 0;
+        width: 90%;
+        height: 50vh;
+    }
+}
+
+/* Landscape phone and down */
+@media (max-width: 600px) {
+    body {
+        margin-bottom: 55px;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    header nav ul {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        justify-content: space-between;
+        align-items: center;
+    
+        height: 55px;
+        padding: 0;
+        margin: 0;
+        background-color: #145CE7;
+
+        z-index: 99;
+    }
+
+    header nav ul li {
+        color: white;
+        font-weight: bold;
+        margin: 0 10px
+    }
+
+    .header-content {
+        margin: 70px auto;
+    }
+
+    .pacotes .card {
+        margin: 10px;
+    }
+}
