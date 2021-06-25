@@ -3,27 +3,31 @@
 * {
     padding: 0px;
     margin: 0px;
-    background-color: transparent;
+    /* background-color: transparent; */
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif, arial;
     width: 100vw;
     
 }
 
 header {
-    padding-top: 10px;
-    background: no-repeat center/cover url(../images/principalbg.png);
+    padding-top: 5px;
+    background: no-repeat left/cover url(../images/fundo-principal.png);
     height: calc(100vh - 120px);
     position: relative;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: black;
+    /* background-color: black; */
     
 }
 
@@ -31,25 +35,28 @@ header::before {
     content: "";
     width: 100%;
     height: 100px;
-    background: linear-gradient(to bottom, transparent, #000807);
+    background: linear-gradient(to bottom, transparent, #EBEBEB);
     /* opacity: .7; */
     position: absolute;
     bottom: 0;
     z-index: 100;
 }
 
+.menu-mobile {
+    display: none;
+}
+
 header nav {
     display: flex;
     justify-content: space-between;
     margin: auto 30px;
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
-header nav p {
-    font-weight: bold;
-    color: #197278;
-    text-transform: uppercase;
-    position: relative;
+header nav img {
+    width: 100px;
+    padding: 0;
+    margin: 0;
 }
 
 ul {
@@ -57,8 +64,8 @@ ul {
 }
 
 header nav ul {
-    
     display: flex;
+    align-items: center;
 }
 
 header nav ul li {
@@ -99,8 +106,13 @@ a {
     margin-bottom: 15px;
 }
 
+.button-know {
+    width: 40%;
+}
+
 button {
     padding: 10px 15px;
+    width: 100%;
     border-radius: 8px;
     border: none;
     /* background-color: #FD9704; */
@@ -113,7 +125,8 @@ button {
 .topico {
     /* background-color: #e5e5e5; */
     /* margin-top: 1px solid #000807; */
-    background-color: #000807;
+    /* background-color: #000807; */
+    background-color: #EBEBEB;
     margin: 0;
     position: relative;
     padding-bottom: 25px;
@@ -125,7 +138,7 @@ button {
     bottom: 0;
     width: 100%;
     height: 10px;
-    background: linear-gradient(180deg, #000807, #EBEBEB);
+    background: linear-gradient(180deg, transparent #EBEBEB);
     z-index: 10;
 }
 
@@ -133,14 +146,14 @@ button {
     margin-block-start: 0;
     margin-block-end: 0;
     text-align: center;
-    padding: 25px 0;
+    padding: 45px 0 25px 0;
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 0;
+    /* padding-top: 15px; */
 }
 
 #pacotes {
-    color: #EBEBEB;
+    color: #000807;
 }
 
 .pacotes {
@@ -150,6 +163,7 @@ button {
     margin: 0 auto;
     flex-wrap: wrap;
     /* background-color: #000807; */
+    background-color: #EBEBEB;
    
 }
 
@@ -159,16 +173,20 @@ button {
     background-color: white;
     position: relative;
     margin: 10px 10px 15px 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
+    transition: all .2s;
 }
 
+.pacotes .card::before {
+    box-shadow: 2px 2px 2px 2px #000807;
+}
 
 .pacotes .card img {
     width: 100%;
     height: 280px;
     object-fit: cover;
     border-radius: 24px 0 0 0;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .pacotes .card .card-ico {
@@ -239,25 +257,43 @@ button {
     animation: ease 4s infinite;
 }
 
+/* @keyframes changes {
+    0% {
+        background-position: left;
+        transform: rotateX(0deg);
+    }
+    20% {
+        transform: rotateX(35deg);
+    }
+    70% {
+        background-position: center;
+        transform: rotateX(-35deg);
+    }
+    100% {
+        background-position: left;
+        transform: rotateX(0deg);
+    }
+} */
+
 .topico_service {
-    background-color: #EBEBEB;
+    background-color: white;
     position: relative;
     padding: 0px 0px 25px 0px;
 }
 
-.topico_service::after {
+/* .topico_service::after {
     content: "";
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 10px;
     background: linear-gradient(180deg, #EBEBEB, #000807);
-}
+} */
 
 #servicos {
     /* background-color: transparent; */
     /* margin: 0; */
-    background-color: #EBEBEB;
+    background-color: white;
 }
 
 .services {
@@ -266,7 +302,7 @@ button {
     flex-wrap: wrap;
     max-width: 950px;
     margin: auto;
-    background-color: #EBEBEB;
+    background-color: white;
 }
 
 .services_card {
@@ -287,10 +323,11 @@ figure {
 figure svg {
     width: 60px;
     height: 60px;
+    font-size: 3rem;
 }
 
 .card_tampadrao {
-    height: 140px;
+    height: 120px;
     text-align: center;
 }
 
@@ -309,12 +346,12 @@ figure svg {
 /* footer */
 
 footer {
-    /* background-color: #e5e5e5; */
-    background-color: #000807;
+    background-color: #EBEBEB;
+    /* background-color: #000807; */
 }
 
 footer h1 {
-    color: #EBEBEB;
+    color: #000807;
 }
 
 footer section {
@@ -370,14 +407,31 @@ footer section .contato {
 }
 
 footer section iframe {
-    padding: 20px 10% 60px 10%;
+    padding: 20px 10% 40px 10%;
     width: 80%;
+}
+
+footer .direitos-pag {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 0 10px 0;
+    color: grey;
+    font-size: .8rem;
+}
+
+footer .direitos-pag small {
+    cursor: pointer;
 }
 
 /* RESPONSIVIDADE */
 
 /* Landscape phone to portrait tablet */
 @media (min-width: 767px) {
+    button:hover {
+        filter: saturate(1.5);
+    }
+
     figure svg:hover {
         /* color: #FD9704; */
         color: #197278;
@@ -386,8 +440,9 @@ footer section iframe {
     }
 
     .pacotes .card:hover {
-        transform: scale(1.01);
-        transition: .2s;
+        transform: translateY(-2px);
+        filter: saturate(1.5);
+        /* filter: brightness(.9); */
     }
 
     header nav ul li:hover,
@@ -397,6 +452,10 @@ footer section iframe {
         /* color: #EA9010; */
         transition: .3s;
         border-bottom: 1px solid #197278;
+    }
+    .contato address ul li:hover {
+        color: #197278;
+        text-decoration: underline;
     }
 }
 
@@ -422,7 +481,7 @@ footer section iframe {
 /* Landscape map */
 @media (max-width: 700px) {
     footer section iframe {
-        padding: 20px 0 60px 0;
+        padding: 20px 0 40px 0;
         width: 90%;
         height: 50vh;
     }
@@ -434,32 +493,51 @@ footer section iframe {
         margin-bottom: 55px;
     }
 
-    header nav {
-        display: flex;
-        justify-content: center;
-        
+    header nav{
+        /* justify-content: center; */
+        padding: 0;
     }
 
-    header nav ul {
-        position: fixed;
+    header nav .menu-desktop {
+        display: none;
+    }
+    .menu-mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 55px;
         width: 100%;
+        position: fixed;
         bottom: 0;
         left: 0;
-        justify-content: space-between;
-        align-items: center;
-    
-        height: 55px;
-        padding: 0;
+        z-index: 999;
+        background-color: white;
         margin: 0;
-        background-color: #197278;
-
-        z-index: 99;
+        padding: 0;
     }
 
+    .menu-mobile nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-logo {
+        width: 80px;
+        padding: 0;
+    }
+ 
+    .menu-mobile nav ul li a:nth-child(3) {
+        transform: translateY(-20px);
+    }
     header nav ul li {
-        color: white;
+        color: #197278;
         font-weight: bold;
-        margin: 0 5px
+        line-height: 4px;
+        font-size: .9rem;
+        margin: 0 3px;
+        letter-spacing: -1px;
     }
 
     .header-content {
@@ -468,5 +546,11 @@ footer section iframe {
 
     .pacotes .card {
         margin: 10px;
+    }
+}
+
+@media (max-width: 460px) {
+    footer section iframe {
+        height: 40vh;
     }
 }

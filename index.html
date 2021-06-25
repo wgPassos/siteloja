@@ -8,25 +8,36 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Clothes Store</title>
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <script src="https://kit.fontawesome.com/c42c8cf5a6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <p>Logo</p>
-            <ul>
+            <img src="./images/logo.png" alt="Logotipo da loja">
+            <ul class="menu-desktop">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#pacotes">Produtos</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <nav class="menu-mobile">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pacotes">Produtos</a></li>
+                <li><a href="#home"><img class="img-logo" src="./images/logo.png" alt="Logotipo da loja"></a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
         <section id="home" class="header-content">
             <h1>Seu estilo de loja</h1>
-            <p>Conheça nossos produtos que marcam sua passagem
-                em os lugares!
+            <p>Nossos produtos que marcam sua passagem
+                em todos os lugares!
             </p>
-            <button>Saiba mais</button>
+            <button class="button_buy button-know">Saiba mais</button>
         </section>
     </header>
 
@@ -44,7 +55,9 @@
                         <li> <i data-feather="dollar-sign"> </i> 59,00</li>
                         <!-- <li> <i data-feather="briefcase"> </i> Serviço de quarto</li> -->
                     </ul>
-                    <button class="button_buy">Comprar</button>
+                    <a class="a-button" href="https://api.whatsapp.com/send?phone=5547988524311&text=Olá! Tenho interesse nessa peita! Fale mais sobre."
+                        target="_blank"><button class="button_buy">Comprar
+                    </button></a>
                 </section>
             </article>
 
@@ -69,8 +82,8 @@
                     <p class="card-bottom">R$69,00</p>
                     <h1>Camisa Social</h1>
                     <ul>
-                        <li> <i data-feather="coffee"> </i> Tecido egípicio</li>
-                        <li> <i data-feather="wifi"> </i> 69,00</li>
+                        <li> <i data-feather="award"> </i> Tecido egípicio</li>
+                        <li> <i data-feather="dollar-sign"> </i> 69,00</li>
                     </ul>
                     <button class="button_buy">Comprar</button>
                 </section>
@@ -84,8 +97,8 @@
                     <p class="card-bottom">R$64,00</p>
                     <h1>Polo Lacoste</h1>
                     <ul>
-                        <li> <i data-feather="coffee"> </i> Marca fina</li>
-                        <li> <i data-feather="wifi"> </i> 64,00</li>
+                        <li> <i data-feather="award"> </i> Marca fina</li>
+                        <li> <i data-feather="dollar-sign"> </i> 64,00</li>
                     </ul>
                     <button class="button_buy">Comprar</button>
                 </section>
@@ -98,8 +111,8 @@
                     <p class="card-bottom">R$55,00</p>
                     <h1>Moleton</h1>
                     <ul>
-                        <li> <i data-feather="coffee"> </i> Algodão e elastano</li>
-                        <li> <i data-feather="wifi"> </i> 55,00</li>
+                        <li> <i data-feather="award"> </i> Algodão e elastano</li>
+                        <li> <i data-feather="dollar-sign"> </i> 55,00</li>
                     </ul>
                     <button class="button_buy">Comprar</button>
                 </section>
@@ -112,8 +125,8 @@
                     <p class="card-bottom">R$49,00</p>
                     <h1>Boné</h1>
                     <ul>
-                        <li> <i data-feather="coffee"> </i> Várias cores</li>
-                        <li> <i data-feather="wifi"> </i> 49,00</li>
+                        <li> <i data-feather="award"> </i> Várias cores</li>
+                        <li> <i data-feather="dollar-sign"> </i> 49,00</li>
                     </ul>
                     <button class="button_buy">Comprar</button>
                 </section>
@@ -126,7 +139,7 @@
         <section class="services">
             <section class="services_card">
                 <figure>
-                    <i data-feather="map"></i>
+                    <i data-feather="truck"></i>
                 </figure>
                 <section class="card_tampadrao">
                     <h3>Entregas à domicílio</h3>
@@ -134,12 +147,12 @@
                         além de dar informações sobre o local, vai nos conduzir ao longo do trajeto.
                     </p>
                 </section>
-                <button class="button_buy">Saiba mais</button>
+                <button class="button_buy button-know">Saiba mais</button>
             </section>
 
             <section class="services_card">
                 <figure>
-                    <i data-feather="camera"></i>
+                    <i data-feather="thumbs-up"></i>
                 </figure>
                 <section class="card_tampadrao">
                     <h3>Qualidade das marcas</h3>
@@ -147,12 +160,12 @@
                         das viagens para que você aproveite ao máximo e sem se preocupar.
                     </p>
                 </section>
-                <button class="button_buy">Saiba mais</button>
+                <button class="button_buy button-know">Saiba mais</button>
             </section>
 
             <section class="services_card">
                 <figure>
-                    <i data-feather="navigation"></i>
+                    <i data-feather="smile"></i>
                 </figure>
                 <section class="card_tampadrao">
                     <h3>Facilidade para comprar</h3>
@@ -160,7 +173,7 @@
                         a liberdade, oferecemos o serviço de aluguel de veículos com preços coerentes.
                     </p>
                 </section>
-                <button class="button_buy">Saiba mais</button>
+                <button class="button_buy button-know">Saiba mais</button>
             </section>
         </section>
 
@@ -174,8 +187,8 @@
                 <address>
                     <ul>
                         <li> <i data-feather="map-pin"> </i>Av. Supermovimentada</li>
-                        <li> <i data-feather="instagram"> </i>willianviagens.br</li>
-                        <li> <i data-feather="at-sign"> </i>willianviagens.br@gmail.com</li>
+                        <li> <a id="insta-contact" href="https://www.instagram.com/" target="_blank"> <i data-feather="instagram"> </i>clothesstore.br</a></li>
+                        <li> <i data-feather="at-sign"> </i>clothesstore.br@gmail.com</li>
                     </ul>
                 </address>
             </section>
@@ -183,6 +196,11 @@
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12195.654694151344!2d-48.83768751656935!3d-26.36179002694377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1619459633546!5m2!1spt-BR!2sbr"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
+        </section>
+        <section class="direitos-pag">
+            <p>Todos os direitos reservados a Clothes Store <br>
+            &copy;2021 <br>
+            <small>Desenvolvido por Willian Passos</small></p>
         </section>
     </footer>
 
