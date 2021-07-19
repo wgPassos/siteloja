@@ -430,10 +430,11 @@ footer .direitos-pag small {
 
 aside {
     background-image: url(../images/bag_fundo.jpg);
+    /* padding-top: 20px; */
     height: 80vh;
     background-size: cover;
     /* display: flex; */
-    background-position: center;
+    background-position: top center;
     background-attachment: fixed;
 }
 
