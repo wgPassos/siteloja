@@ -24,6 +24,7 @@ body {
 header {
     padding-top: 5px;
     background: no-repeat left/cover url(../images/fundo-principal.png);
+    /* filter: grayscale(.2) */
     height: calc(100vh - 120px);
     position: relative;
     margin: 0px;
@@ -92,25 +93,45 @@ a {
     margin: 150px auto;
     text-align: center;
     /* color: #197278; */
-    color: #EBEBEB;
-    text-shadow: 1px 2px 8px rgb(49, 45, 45);
+    color: white;
+    text-shadow: 1px -2px 7px black;
     letter-spacing: 2px;
 }
 
 .header-content h1 {
     margin-bottom: 10px;
     font-size: 2rem;
-    
+    opacity: 0;
+    animation: 3s moveBanner .2s ease forwards;
 }
 
 .header-content p {
     font-weight: bold;
     margin-bottom: 15px;
+    opacity: 0;
+    animation: 3s moveBanner .5s ease forwards;
 }
 
 .button-know {
     width: 40%;
+    opacity: 0;
+    animation: 3s moveBanner 1s ease forwards;
 }
+
+.button_buy {
+    background: linear-gradient(180deg, #197278, #EBEBEB);
+}
+@keyframes moveBanner {
+    0% {
+        transform: translatey(10rem) rotatey(-30deg);
+    }
+    100% {
+        transform: translatey(0) rotatey(0);
+        opacity: 1;
+    }
+}
+
+
 
 button {
     padding: 10px 15px;
@@ -253,29 +274,6 @@ button {
     height: 18px;
     margin-right: 10px;
 }
-
-.button_buy {
-    background: linear-gradient(180deg, #197278, #EBEBEB);
-    animation: ease 4s infinite;
-}
-
-/* @keyframes changes {
-    0% {
-        background-position: left;
-        transform: rotateX(0deg);
-    }
-    20% {
-        transform: rotateX(35deg);
-    }
-    70% {
-        background-position: center;
-        transform: rotateX(-35deg);
-    }
-    100% {
-        background-position: left;
-        transform: rotateX(0deg);
-    }
-} */
 
 .topico_service {
     background-color: white;
@@ -428,12 +426,12 @@ footer .direitos-pag small {
 
 aside {
     background-image: url(../images/bag_fundo.jpg);
-    /* padding-top: 20px; */
     height: 80vh;
     background-size: cover;
-    /* display: flex; */
     background-position: top ;
     background-attachment: fixed;
+    object-fit: cover;
+    text-shadow: 3px 3px 10px #EBEBEB;
 }
 
 .paralax-container {
