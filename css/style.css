@@ -427,11 +427,13 @@ footer .direitos-pag small {
 aside {
     background-image: url(../images/bag_fundo.jpg);
     height: 80vh;
+    /* width: ; */
     background-size: cover;
     background-position: top ;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     object-fit: cover;
-    text-shadow: 3px 3px 10px #EBEBEB;
+
 }
 
 .paralax-container {
@@ -446,7 +448,7 @@ aside {
 aside .paralax-container h1 {
     font-size: 5rem;
     text-align: center;
-    
+    text-shadow: 3px 3px 10px #EBEBEB;
     font-family: 'Mrs Saint Delafield', cursive;
 }
 
